@@ -11,7 +11,7 @@ You can send your data to `activity-log` API with this template:
 
 ### Request Method and URL:
 ```
-Post: /api/v1/activity-logger
+Post: /api/v1/activity-log
 ```
 
 ### Request Body:
