@@ -9,13 +9,15 @@ First Release Comings soon.
 ## Simple Usage:
 You can send your data to `activity-log` API with this template:
 
+### Request Method and URL:
 ```
 Post: /api/v1/activity-logger
 ```
 
+### Request Body:
 ```json
 {
-    "type": 1, //activity type id (Based on Admin Panel) - <for example 1 is `click` type activity>
+    "type": 1,
     "meta": [
         {
             "key": "clicked_element",
@@ -27,4 +29,14 @@ Post: /api/v1/activity-logger
         },
     ]
 }
+```
+
+`type` field shown `activity_type_id` based on admin panel. each activity type has an unique id.
+For Example you can make an `Activity Type` in admin panel for clicks and get it's unique id.
+When user clicks in every elements in your website, you should make a post request and pass click type id in type field.
+
+`meta` field is an array that hold meta data of each activity. you can fill it based on your own requirements.
+
+```
+[Note]: Admin Panel is not available yet but it is under construnction and will coming soon :)
 ```
